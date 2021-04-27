@@ -1,0 +1,8 @@
+{
+  "dbConnection": {
+    "mongodb": "mongodb+srv://root:QOubNW6ule16Lzrz@cluster0.j1gz5.mongodb.net/programacao-mobile-api?retryWrites=true&w=majority"
+  },
+  "api": {
+    "port": "3333"
+  }
+}
