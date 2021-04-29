@@ -9,6 +9,14 @@ class EstablishmentController{
       return res.status(400).json({ error: "Não foi possivel realizar tal busca"})
     }
   }
+  static async createEstablishment(req, res){
+    try{
+      const establishment = await Establishment.create(req.body);
+      return res.json(establishment);
+    } catch(error){
+      return res.status(400).json({ error: "Não foi possivel criar o devido estabelecimento"});
+    }
+  }
 }
 
 module.exports = EstablishmentController;
