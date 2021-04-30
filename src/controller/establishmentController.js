@@ -13,7 +13,7 @@ class EstablishmentController{
   static async createEstablishment(req, res){
     try{
       const establishment = await Establishment.create(req.body);
-      return res.json(establishment);
+      return res.status(200).json(establishment);
     } catch(error){
       return res.status(400).json({ error: "Não foi possivel criar o devido estabelecimento"});
     }
