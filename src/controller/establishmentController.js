@@ -10,7 +10,7 @@ class EstablishmentController{
       return res.status(400).json({ error: "Não foi possivel realizar tal busca"})
     }
   }
-  //Method for search an user on db
+  //Method for search an Establishment on db
   static async oneEstablishement(req, res){
     try{
       const establishment = await Establishment.find({ _id: req.params.id})
