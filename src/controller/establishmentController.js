@@ -1,7 +1,7 @@
 const Establishment = require('../model/Establishment')
 
 class EstablishmentController{
-  // Method for searsh all Establishment on db
+  // Method for search all Establishment on db
   static async allEstablishment(req, res){
     try{
       const establishment = await Establishment.find({})
