@@ -5,10 +5,12 @@ const app = express();
 
 routes(app)
 
+// Variable configuration 
 const config = require('config');
 const port = config.get('api.port');
 const mongodb = config.get('dbConnection.mongodb')
 
+// Conection on DB
 mongoose.connect(mongodb, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
   .then(() => {
     console.log('MongoDB Connected');
