@@ -1,6 +1,7 @@
 const Establishment = require('../model/Establishment')
 
 class EstablishmentController{
+  // Method for search all Establishment on db
   static async allEstablishment(req, res){
     try{
       const establishment = await Establishment.find({})
@@ -18,6 +19,7 @@ class EstablishmentController{
       return res.status(400).json({ error: "Não foi possivel encontrar este usuario"})
     }
   }
+  // Method for create Establishment on db
   static async createEstablishment(req, res){
     try{
       const establishment = await Establishment.create(req.body);
