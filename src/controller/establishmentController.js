@@ -10,6 +10,7 @@ class EstablishmentController{
       return res.status(400).json({ error: "Não foi possivel realizar tal busca"})
     }
   }
+  // Method for create Establishment on db
   static async createEstablishment(req, res){
     try{
       const establishment = await Establishment.create(req.body);
