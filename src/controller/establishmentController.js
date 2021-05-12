@@ -16,7 +16,7 @@ class EstablishmentController{
       const establishment = await Establishment.find({ _id: req.params.id})
       return res.status(200).json(establishment)
     } catch(error){
-      return res.status(400).json({ error: "Não foi possivel encontrar este usuario"})
+      return res.status(400).json({ error: "Não foi possivel encontrar este estabelecimento"})
     }
   }
   // Method for create Establishment on db
